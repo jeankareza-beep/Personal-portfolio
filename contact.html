@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kareza Jean Bol-anon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Kareza</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" id="menu-btn">☰</button>
+            <button id="theme-btn">🌙</button>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact Me</h1>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+
+                <p>
+                    If you want to contact me, you can send me a message
+                    using the form or visit my social media accounts.
+                </p>
+
+                <p><strong>Email:</strong> jeankareza@gmail.com</p>
+                <p><strong>Facebook:</strong> Kareza Bol-anon</p>
+             
+
+            <form id="contact-form">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Enter your message"></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+
+                <p id="form-message"></p>
+
+            </form>
+
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
