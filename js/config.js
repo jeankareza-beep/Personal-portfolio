@@ -1,5 +1,4 @@
-// Set this to the public Tinkerhost site URL after hosting is created.
-// Example: "https://your-site.tinkerhost.net/"
+// Public API application base URL on the Tinkerhost PHP backend.
 window.PORTFOLIO_CONFIG = {
-    apiBaseUrl: "https://wduyc5q7.thsite.top/"
+    apiBaseUrl: "https://kareza-portfolio.thsite.top/"
 };
