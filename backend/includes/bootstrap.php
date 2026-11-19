@@ -24,6 +24,23 @@ if (!is_array($config) || !isset($config['db'], $config['app'])) {
     exit('Application configuration is invalid.');
 }
 
+$setupKey = (string) ($config['app']['setup_key'] ?? '');
+$csrfSecret = (string) ($config['app']['csrf_secret'] ?? '');
+$siteOrigin = (string) ($config['app']['site_origin'] ?? '');
+$baseUrl = (string) ($config['app']['base_url'] ?? '');
+$originParts = parse_url($siteOrigin);
+$baseParts = parse_url($baseUrl);
+if (strlen($setupKey) < 32 || str_starts_with($setupKey, 'REPLACE_WITH_')
+    || strlen($csrfSecret) < 32 || str_starts_with($csrfSecret, 'REPLACE_WITH_')
+    || filter_var($siteOrigin, FILTER_VALIDATE_URL) === false
+    || !is_array($originParts) || ($originParts['scheme'] ?? '') !== 'https'
+    || !empty($originParts['path']) || !empty($originParts['query']) || !empty($originParts['fragment'])
+    || filter_var($baseUrl, FILTER_VALIDATE_URL) === false
+    || !is_array($baseParts) || ($baseParts['scheme'] ?? '') !== 'https') {
+    http_response_code(503);
+    exit('Security settings are incomplete. Configure HTTPS URLs and strong private setup and CSRF secrets.');
+}
+
 $timezone = (string) ($config['app']['timezone'] ?? 'UTC');
 if (!in_array($timezone, timezone_identifiers_list(), true)) {
     $timezone = 'UTC';
