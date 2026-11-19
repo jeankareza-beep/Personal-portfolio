@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Kareza Jean Bol-anon, an Information Technology student.">
     <title>Kareza Jean Bol-anon | Portfolio</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <a href="index.html" class="logo">Kareza.</a>
-
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -22,46 +19,30 @@
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-<button class="menu-btn" id="menu-btn">☰</button>
-<button id="theme-btn">🌙</button>
+            <button class="menu-btn" id="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+            <button id="theme-btn" type="button" aria-label="Toggle dark mode">🌙</button>
         </nav>
     </header>
-
     <main>
         <section class="home">
-
             <div class="home-content">
                 <p class="greeting">Hello, I'm</p>
-
-                <h1>Kareza Jean Bol-anon</h1>
-
-                <h2 id="typing-text">IT Student & Future Technology Professional</h2>
-
-                <p class="intro">
-                    Hello! I’m Kareza Jean Bol-anon, an Information Technology
-                    student who enjoys learning about computers, programming,
-                    and technology. I enjoy working on creative projects and
-                    discovering how technology can be used to solve problems.
-                    As a student, I am continuously developing my skills
-                    through school projects and different activities.
-                </p>
-
+                <h1 data-profile-name>Kareza Jean Bol-anon</h1>
+                <h2 data-profile-headline>IT Student &amp; Future Technology Professional</h2>
+                <p class="intro" data-profile-introduction>Hello! I’m Kareza Jean Bol-anon, an Information Technology student who enjoys learning about computers, programming, and technology. I enjoy working on creative projects and discovering how technology can be used to solve problems. As a student, I am continuously developing my skills through school projects and different activities.</p>
                 <div class="home-buttons">
                     <a href="projects.html" class="btn">View My Projects</a>
                     <a href="contact.html" class="btn secondary-btn">Contact Me</a>
                 </div>
             </div>
-
             <div class="home-image">
                 <div class="profile-circle">
-    <img src="images/profile.jpg" alt="Kareza Jean Bol-anon">
-</div>
+                    <img src="images/profile.jpg" alt="Kareza Jean Bol-anon" data-profile-image>
+                </div>
             </div>
-
         </section>
     </main>
-
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 </html>

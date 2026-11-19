@@ -6,13 +6,10 @@
     <title>Contact | Kareza Jean Bol-anon</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <a href="index.html" class="logo">Kareza</a>
-
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -21,50 +18,40 @@
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-
-            <button class="menu-btn" id="menu-btn">☰</button>
-            <button id="theme-btn">🌙</button>
+            <button class="menu-btn" id="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+            <button id="theme-btn" type="button" aria-label="Toggle dark mode">🌙</button>
         </nav>
     </header>
-
-    <section class="contact">
-        <h1>Contact Me</h1>
-
-        <div class="contact-container">
-
-            <div class="contact-info">
-                <h2>Get In Touch</h2>
-
-                <p>
-                    If you want to contact me, you can send me a message
-                    using the form or visit my social media accounts.
-                </p>
-
-                <p><strong>Email:</strong> jeankareza@gmail.com</p>
-                <p><strong>Facebook:</strong> Kareza Bol-anon</p>
-             
-
-            <form id="contact-form">
-
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Enter your name">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
-
-                <label for="message">Message</label>
-                <textarea id="message" rows="5" placeholder="Enter your message"></textarea>
-
-                <button type="submit" class="btn">Send Message</button>
-
-                <p id="form-message"></p>
-
-            </form>
-
-        </div>
-    </section>
-
+    <main>
+        <section class="contact">
+            <h1>Contact Me</h1>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>If you want to contact me, send a message using the form or visit my social media account.</p>
+                    <p><strong>Email:</strong> <a href="mailto:jeankareza@gmail.com" data-profile-email>jeankareza@gmail.com</a></p>
+                    <p><strong>Facebook:</strong> <span data-profile-facebook>Kareza Bol-anon</span></p>
+                </div>
+                <form id="contact-form" novalidate>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="120" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" maxlength="254" required>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is your message about?" maxlength="180" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" maxlength="4000" required></textarea>
+                    <div class="visually-hidden" aria-hidden="true">
+                        <label for="website">Leave this field blank</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p id="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 </html>

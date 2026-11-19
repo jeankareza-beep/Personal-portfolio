@@ -6,13 +6,10 @@
     <title>Resume | Kareza Jean Bol-anon</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <a href="index.html" class="logo">Kareza</a>
-
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -21,45 +18,29 @@
                 <li><a href="resume.html" class="active">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
-            <button class="menu-btn" id="menu-btn">☰</button>
-            <button id="theme-btn">🌙</button>
+            <button class="menu-btn" id="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+            <button id="theme-btn" type="button" aria-label="Toggle dark mode">🌙</button>
         </nav>
     </header>
-
-    <section class="resume">
-        <h1>My Resume</h1>
-
-        <div class="resume-container">
-
-            <div class="resume-box">
-                <h2>Education</h2>
-                <h3>Bachelor of Science in Information Technology</h3>
-                <p>3rd Year Information Technology Student</p>
-                <p>Currently studying and developing my knowledge in programming, networking, and web development.</p>
+    <main>
+        <section class="resume">
+            <h1>My Resume</h1>
+            <h2 class="resume-section-title">Education</h2>
+            <div class="resume-container" id="education-list">
+                <article class="resume-box"><h3>Bachelor of Science in Information Technology</h3><p>3rd Year Information Technology Student</p><p>Currently studying and developing my knowledge in programming, networking, and web development.</p></article>
             </div>
-
-            <div class="resume-box">
-                <h2>Activities</h2>
-                <p>Participated in school projects and activities related to Information Technology.</p>
-                <p>Worked on programming, networking, and multimedia projects.</p>
+            <h2 class="resume-section-title">Experience</h2>
+            <div class="resume-container" id="experience-list">
+                <article class="resume-box"><h3>School Projects and Activities</h3><p>Participated in school projects and activities related to Information Technology. Worked on programming, networking, and multimedia projects.</p></article>
+                <article class="resume-box"><h3>Training and Practical Experience</h3><p>Developing practical skills through school activities and hands-on projects. Practicing website development, programming, networking, and digital design.</p></article>
             </div>
-
-            <div class="resume-box">
-                <h2>Training & Experience</h2>
-                <p>Developing practical skills through school activities and hands-on projects.</p>
-                <p>Practicing website development, programming, networking, and digital design.</p>
+            <h2 class="resume-section-title">Achievements</h2>
+            <div class="resume-container" id="achievements-list">
+                <article class="resume-box"><h3>Certifications</h3><p>School-based training, activities, and project experience.</p></article>
             </div>
-
-            <div class="resume-box">
-                <h2>Certifications</h2>
-                <p>School-based training, activities, and project experience.</p>
-            </div>
-
-        </div>
-    </section>
-
+        </section>
+    </main>
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 </html>
