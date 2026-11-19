@@ -18,6 +18,7 @@ return [
         'site_origin' => 'https://jeankareza-beep.github.io',
         'base_url' => 'https://REPLACE_WITH_TINKERHOST_HOST/',
         'setup_key' => 'REPLACE_WITH_A_RANDOM_ONE_TIME_SETUP_KEY',
+        'csrf_secret' => 'REPLACE_WITH_A_RANDOM_SECRET_OF_AT_LEAST_32_CHARACTERS',
         'upload_max_bytes' => 3145728,
         'timezone' => 'Asia/Manila',
     ],
