@@ -1,0 +1,13 @@
+# Private production configuration and environment secrets
+backend/config.local.php
+backend/.env
+.env
+
+# Runtime uploads belong on the PHP host, not in Git
+backend/uploads/*
+!backend/uploads/.htaccess
+
+# Local logs and OS/editor artifacts
+*.log
+.DS_Store
+Thumbs.db
